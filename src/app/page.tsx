@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 import { TitleSection } from "./components/TitleSection";
 //import { Card } from "@/components/Card";
 import { useState } from "react";
-import { Testimonial } from "./components/Testimonial";
+//import { Testimonial } from "./components/Testimonial";
 import { Slider } from "./components/Slider";
 
 

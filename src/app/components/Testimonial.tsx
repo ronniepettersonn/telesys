@@ -2,11 +2,11 @@
 
 import Image from 'next/image'
 import Test1 from '../../../public/test1.png'
-import { useState } from 'react';
+//import { useState } from 'react';
 import Arrow from '../../../public/arrow.svg'
 
 export function Testimonial() {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    //const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
         <div>
