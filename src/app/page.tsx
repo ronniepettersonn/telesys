@@ -14,6 +14,7 @@ import { TitleSection } from "./components/TitleSection";
 import { useState } from "react";
 //import { Testimonial } from "./components/Testimonial";
 import { Slider } from "./components/Slider";
+import { IconWhatsapp } from "./components/IconWhatsapp";
 
 
 const tabs = [
@@ -127,6 +128,8 @@ export default function Home() {
       </main>
 
       <Footer />
+
+      <IconWhatsapp />
     </div>
   );
 }
