@@ -28,7 +28,7 @@ export function Testimonial() {
                                 <p className='text-white/50'>Proprietário</p>
                             </div>
 
-                            <p className='mt-6'>
+                            {/* <p className='mt-6'>
                                 "O Telesys foi uma verdadeira revolução na minha empresa,
                                 hoje tenho controle de tudo, sem falar da economia que o
                                 produto nos traz. Tenho uma revenda à qual não tenho atendentes,
@@ -37,7 +37,7 @@ export function Testimonial() {
                                 assim uma economia nas campanhas, sei exatamente qual área está
                                 precisando de mais atenção, sem falar que tenho controle financeiro
                                 de todas as entradas e saídas."
-                            </p>
+                            </p> */}
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@ export function Testimonial() {
                                 <p className='text-white/50'>Proprietário</p>
                             </div>
 
-                            <p className='mt-6'>
+                            {/* <p className='mt-6'>
                                 "O Telesys foi uma verdadeira revolução na minha empresa,
                                 hoje tenho controle de tudo, sem falar da economia que o
                                 produto nos traz. Tenho uma revenda à qual não tenho atendentes,
@@ -101,7 +101,7 @@ export function Testimonial() {
                                 assim uma economia nas campanhas, sei exatamente qual área está
                                 precisando de mais atenção, sem falar que tenho controle financeiro
                                 de todas as entradas e saídas."
-                            </p>
+                            </p> */}
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@ export function Testimonial() {
                                 <p className='text-white/50'>Proprietário</p>
                             </div>
 
-                            <p className='mt-6'>
+                            {/* <p className='mt-6'>
                                 "O Telesys foi uma verdadeira revolução na minha empresa,
                                 hoje tenho controle de tudo, sem falar da economia que o
                                 produto nos traz. Tenho uma revenda à qual não tenho atendentes,
@@ -131,7 +131,7 @@ export function Testimonial() {
                                 assim uma economia nas campanhas, sei exatamente qual área está
                                 precisando de mais atenção, sem falar que tenho controle financeiro
                                 de todas as entradas e saídas."
-                            </p>
+                            </p> */}
                         </div>
                     </div>
                 </div>

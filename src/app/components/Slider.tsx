@@ -7,7 +7,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Test1 from '../../../public/test1.png'
 import Arrow from '../../../public/arrow.svg'
-import { PiDotOutlineFill } from 'react-icons/pi';
+//import { PiDotOutlineFill } from 'react-icons/pi';
 
 export function Slider() {
     //const swiperSlide = useSwiperSlide()
@@ -94,14 +94,14 @@ export function Slider() {
                                 </div>
 
                                 <p className='mt-6 text-ellipsis overflow-hidden'>
-                                    "O Telesys foi uma verdadeira revolução na minha empresa,
+                                    {'"'}O Telesys foi uma verdadeira revolução na minha empresa,
                                     hoje tenho controle de tudo, sem falar da economia que o
                                     produto nos traz. Tenho uma revenda à qual não tenho atendentes,
                                     os pedidos são enviados, e assim os entregadores imprimem o pedido
                                     e fazem as entregas, controlo fluxo de vendas por áreas proporcionando
                                     assim uma economia nas campanhas, sei exatamente qual área está
                                     precisando de mais atenção, sem falar que tenho controle financeiro
-                                    de todas as entradas e saídas."
+                                    de todas as entradas e saídas.{'"'}
                                 </p>
                             </div>
                         </div>
@@ -162,14 +162,14 @@ export function Slider() {
                                 </div>
 
                                 <p className='mt-6'>
-                                    "O Telesys foi uma verdadeira revolução na minha empresa,
+                                    {'"'}O Telesys foi uma verdadeira revolução na minha empresa,
                                     hoje tenho controle de tudo, sem falar da economia que o
                                     produto nos traz. Tenho uma revenda à qual não tenho atendentes,
                                     os pedidos são enviados, e assim os entregadores imprimem o pedido
                                     e fazem as entregas, controlo fluxo de vendas por áreas proporcionando
                                     assim uma economia nas campanhas, sei exatamente qual área está
                                     precisando de mais atenção, sem falar que tenho controle financeiro
-                                    de todas as entradas e saídas."
+                                    de todas as entradas e saídas.{'"'}
                                 </p>
                             </div>
                         </div>
@@ -230,14 +230,14 @@ export function Slider() {
                                 </div>
 
                                 <p className='mt-6'>
-                                    "O Telesys foi uma verdadeira revolução na minha empresa,
+                                    {'"'}O Telesys foi uma verdadeira revolução na minha empresa,
                                     hoje tenho controle de tudo, sem falar da economia que o
                                     produto nos traz. Tenho uma revenda à qual não tenho atendentes,
                                     os pedidos são enviados, e assim os entregadores imprimem o pedido
                                     e fazem as entregas, controlo fluxo de vendas por áreas proporcionando
                                     assim uma economia nas campanhas, sei exatamente qual área está
                                     precisando de mais atenção, sem falar que tenho controle financeiro
-                                    de todas as entradas e saídas."
+                                    de todas as entradas e saídas.{'"'}
                                 </p>
                             </div>
                         </div>
