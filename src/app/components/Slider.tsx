@@ -11,7 +11,7 @@ import Arrow from '../../../public/arrow.svg'
 
 export function Slider() {
     //const swiperSlide = useSwiperSlide()
-    const [isCurrent, setIsCurrent] = useState(null)
+    const [isCurrent, setIsCurrent] = useState<number | null>(null)
 
     return (
         <Swiper
