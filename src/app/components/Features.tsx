@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useState } from "react";
 //import { Card } from "./Card";
 
 import { PiCubeFill, PiMoneyLight, PiTruckLight, PiWhatsappLogoLight } from "react-icons/pi";
@@ -5,6 +8,26 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 export function Features() {
+    const [slidesPerView, setSlidesPerView] = useState(3)
+
+    useEffect(() => {
+        function handleResize() {
+            if (window.innerWidth < 720) {
+                setSlidesPerView(1)
+            } else {
+                setSlidesPerView(3)
+            }
+        }
+
+        handleResize()
+
+        addEventListener('resize', handleResize)
+
+        return () => {
+            removeEventListener('resize', handleResize)
+        }
+    }, [])
+
     return (
         <div className="pt-16 max-w-[1200px] ">
             <div className="relative">
@@ -20,7 +43,7 @@ export function Features() {
                 className='z-[10] overflow-hidden w-full mt-6'
                 modules={[Autoplay]}
                 centeredSlides={true}
-                slidesPerView={3}
+                slidesPerView={slidesPerView}
                 loop
                 autoplay={{
                     delay: 3000,
