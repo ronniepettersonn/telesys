@@ -76,7 +76,7 @@ export default function Home() {
           <Features />
         </section>
 
-        <section className="pt-30 max-w-[1200px] m-auto px-4">
+        <section className="pt-30 max-w-[1200px] m-auto px-4" id="suporte">
           <TitleSection
             title="Precisa de ajuda?"
             description="Nossa equipe de suporte é treinada e está disponível para lhe ajudar no que for necessário"
@@ -142,7 +142,25 @@ export default function Home() {
           <Slider />
         </section>
 
-        <section className="mt-30">
+        <section className="pt-30 pb-20 max-w-[1200px] m-auto">
+          <TitleSection
+            title="Veja um pouco do Telesys"
+            description="Veja alguns vídeos do Sistema Telesys em funcionamento e como você pode ser eficiente no controle da sua revenda"
+
+          />
+
+          <div className="mt-20 flex justify-center">
+            <div className="border border-[#4C5155] max-w-[600px] w-full p-10 rounded-3xl">
+              <h3 className="text-3xl font-semibold">Conheça o Telesys</h3>
+
+              <p className="text-white/80 ">Assite esse video de apresentação do Telesys e tenha uma boa noção de
+                como o sistema funciona e como ele pode lhe ajudar</p>
+
+              <div className="flex justify-center">
+                <iframe width={540} height={380} className="rounded-xl" src="https://www.youtube.com/embed/yZ9blrqi9cw?si=ZUS9OstXnvowgsy-" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+              </div>
+            </div>
+          </div>
 
         </section>
 

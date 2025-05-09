@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 //import { Card } from "./Card";
 
-import { PiCubeFill, PiMoneyLight, PiTruckLight, PiWhatsappLogoLight } from "react-icons/pi";
+import { PiCubeFill, PiCurrencyCircleDollar, PiMoneyLight, PiTruckLight, PiWhatsappLogoLight } from "react-icons/pi";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -45,6 +45,7 @@ export function Features() {
                 centeredSlides={true}
                 slidesPerView={slidesPerView}
                 loop
+                speed={1300}
                 autoplay={{
                     delay: 3000,
                     disableOnInteraction: false,
@@ -76,6 +77,13 @@ export function Features() {
                     <div className="flex flex-col max-w-[250px] items-center gap-4 py-8 px-4 text-[#D0D1D1]">
                         <PiMoneyLight size={54} />
                         <h4 className="text-xl font-bold">Relatórios <br /> Financeiros</h4>
+                    </div>
+                </SwiperSlide>
+
+                <SwiperSlide className='w-full ' style={{ display: 'flex', justifyContent: 'center' }}>
+                    <div className="flex flex-col max-w-[250px] items-center gap-4 py-8 px-4 text-[#D0D1D1]">
+                        <PiCurrencyCircleDollar size={54} />
+                        <h4 className="text-xl font-bold">Controle de <br /> Fiado</h4>
                     </div>
                 </SwiperSlide>
             </Swiper>

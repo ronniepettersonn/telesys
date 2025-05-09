@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Button } from "./Button";
 
-export function TitleSection({ title, description, buttons = true, titleButtonSolid, titleButtonOutline }: { title: string, description?: string, buttons: boolean, titleButtonSolid?: string, titleButtonOutline?: string }) {
+export function TitleSection({ title, description, buttons = true, titleButtonSolid, titleButtonOutline }: { title: string, description: string, buttons?: boolean, titleButtonSolid?: string, titleButtonOutline?: string }) {
     //const router = useRouter()
 
     return (
