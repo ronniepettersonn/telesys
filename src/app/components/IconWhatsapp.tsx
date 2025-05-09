@@ -28,7 +28,7 @@ export function IconWhatsapp() {
         <div className="relative z-50">
             {
                 !openedChat &&
-                <div className="fixed bottom-[90px] md:bottom-[112px] right-5 md:right-10 flex w-[338px] gap-2 rounded-l-[20px] rounded-tr-[20px] border border-[#152323] bg-[#060d0d] px-4 py-3 shadow-emerald-300/10 shadow-[0px_4px_32px_0px] sm:right-10 sm:w-[330px]">
+                <div className="fixed hidden bottom-[90px] md:bottom-[112px] right-5 md:right-10 md:flex w-[338px] gap-2 rounded-l-[20px] rounded-tr-[20px] border border-[#152323] bg-[#060d0d] px-4 py-3 shadow-emerald-300/10 shadow-[0px_4px_32px_0px] sm:right-10 sm:w-[330px]">
                     <div>
                         <svg stroke="currentColor" fill="none" strokeWidth="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="shrink-0 fill-emerald-500" width="24" height="24"><path d="M2.5 10C6.25 10 10 6.25 10 2.5C10 6.25 13.75 10 17.5 10C13.75 10 10 13.75 10 17.5C10 13.75 6.25 10 2.5 10Z" stroke="currentColor" strokeWidth="1.25" strokeLinejoin="round"></path><path d="M1.66666 16.2498C2.36111 16.2498 3.75 14.8609 3.75 14.1665C3.75 14.8609 5.13889 16.2498 5.83333 16.2498C5.13889 16.2498 3.75 17.6388 3.75 18.3332C3.75 17.6388 2.36111 16.2498 1.66666 16.2498Z" stroke="currentColor" strokeWidth="1.25" strokeLinejoin="round"></path><path d="M13.3333 4.1665C14.1667 4.1665 15.8333 2.49984 15.8333 1.6665C15.8333 2.49984 17.5 4.1665 18.3333 4.1665C17.5 4.1665 15.8333 5.83317 15.8333 6.6665C15.8333 5.83317 14.1667 4.1665 13.3333 4.1665Z" stroke="currentColor" strokeWidth="1.25" strokeLinejoin="round"></path></svg>
                     </div>
