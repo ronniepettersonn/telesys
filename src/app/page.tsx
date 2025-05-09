@@ -17,6 +17,7 @@ import { Slider } from "./components/Slider";
 import { IconWhatsapp } from "./components/IconWhatsapp";
 import { Banner } from "./components/Banner";
 import Link from "next/link";
+import { Features } from "./components/Features";
 
 
 const tabs = [
@@ -65,6 +66,10 @@ export default function Home() {
           </div>
 
         </div>
+
+        <section className="max-w-[1200px] m-auto px-4">
+          <Features />
+        </section>
 
         <section className="pt-30 max-w-[1200px] m-auto px-4">
           <TitleSection
