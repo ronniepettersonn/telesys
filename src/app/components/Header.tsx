@@ -28,7 +28,7 @@ export default function Header({ showPromotion, setShowPromotion }: { showPromot
                             </Link>
                         </div>
 
-                        <div className='absolute top-auto bottom-auto right-10'>
+                        <div className='absolute top-auto bottom-auto right-4 md:right-10'>
                             <button type='button' onClick={handleClosePromotion} className=' hover:cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out rounded-full border border-white/20 p-1'>
                                 <PiXBold />
                             </button>

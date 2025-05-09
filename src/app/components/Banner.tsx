@@ -14,7 +14,7 @@ export function Banner() {
             {
                 isShow &&
                 <div className="relative">
-                    <div className="fixed bottom-10 left-10 z-10">
+                    <div className="fixed bottom-5 left-5 md:bottom-10 md:left-10 z-10">
                         <div aria-label="desktop-banner" className="relative z-30 hidden w-full min-w-[644px] overflow-hidden rounded-lg border border-gray-600/50 bg-[#060d0d] shadow-md shadow-emerald-400/20 lg:flex" style={{ opacity: 1, transform: 'translateY(0%) translateZ(0px)' }}>
                             <a aria-label="Accesar oferta exclusiva" className="flex items-center" href="https://api.whatsapp.com/send?phone=5531984372245&text=Olá%2C%20eu%20gostaria%20de%20contratar%20o%20módulo%20de%20rastreio%20para%20os%20meus%20entregadores.%20🚚" rel="noopener noreferrer" target="_blank">
                                 <div className="">
