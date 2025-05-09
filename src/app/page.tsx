@@ -16,6 +16,7 @@ import { useState } from "react";
 import { Slider } from "./components/Slider";
 import { IconWhatsapp } from "./components/IconWhatsapp";
 import { Banner } from "./components/Banner";
+import Link from "next/link";
 
 
 const tabs = [
@@ -37,21 +38,26 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center mt-20 max-w-[1200px] m-auto">
 
           <div className="bg-white rounded-full px-4 py-2 flex gap-2 items-center text-xs md:text-base">
-            <span className="text-[#07090D] font-semibold">Controle sua Revenda com o melhor sistema do Brasil</span>
+            <span className="text-[#07090D] font-semibold">Controle sua Revenda com o melhor Sistema do Brasil</span>
             <div className="h-5 w-5 rounded-full bg-[#07090D]" />
           </div>
 
-          <h2 className="bg-gradient-to-r text-transparent bg-clip-text from-cyan-300 to-blue-600 text-6xl font-extrabold mt-10">Sua Revenda ao seu Controle</h2>
+          <h2 className="bg-gradient-to-r text-transparent max-w-[700px] bg-clip-text from-cyan-300 to-blue-600 text-6xl font-extrabold mt-10">
+            Simplifique a Gestão da Sua Revenda de Gás
+          </h2>
 
           <p className="text-xl mt-10 max-w-[630px] px-4">
-            Praticidade e Segurança são caracteristicas marcantes do Sistema Telesys
-            Fácil e intuitivo, será um prazer controlar sua empresa.
+            Controle pedidos, entregas, estoque e pagamentos em um só lugar de forma simples e rápida.
           </p>
           <p className="text-xl"></p>
 
           <div className="mt-10 flex gap-4">
-            <Button title="Assinar agora" />
-            <Button title="Saiba mais" variant="OUTLINE" />
+            <Link href={'https://api.whatsapp.com/send?phone=5531984372245&text=Olá%20gostaria%20de%20testar%20o%20Sistema%20Telesys%20por%207%20dias%20grátis.%20😀'} target="_blank">
+              <Button title="Teste Grátis por 7 Dias" />
+            </Link>
+            <Link href={'https://youtube.com/netxpertbr'} target="_blank">
+              <Button title="Ver Demonstração" variant="OUTLINE" />
+            </Link>
           </div>
 
           <div className="mt-16 max-h-[480px] mx-4">
