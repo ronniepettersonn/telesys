@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Image from "next/image";
 
 import HeroImg from '../../public/hero1.png'
+import HeroImgMobile from '../../public/hero1-mobile.png'
 import Banner1 from '../../public/banner1.png'
 import Banner2 from '../../public/banner2.png'
 import Banner3 from '../../public/banner3.png'
@@ -61,8 +62,12 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-16 max-h-[480px] mx-4">
+          <div className="hidden md:flex mt-16 max-h-[480px] mx-4">
             <Image src={HeroImg} alt="banner" className="max-h-[480px] w-auto rounded-3xl" />
+          </div>
+
+          <div className="md:hidden mt-16  mx-4">
+            <Image src={HeroImgMobile} alt="banner" className="max-h-[480px] w-auto rounded-3xl" />
           </div>
 
         </div>
