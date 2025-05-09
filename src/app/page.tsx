@@ -32,11 +32,11 @@ export default function Home() {
     <div className=" ">
       <Header showPromotion={showPromotion} setShowPromotion={setShowPromotion} />
 
-      <main className={` m-auto ${showPromotion ? 'pt-40' : 'pt-20'} text-center `}>
+      <main className={` m-auto ${showPromotion ? 'md:pt-40 pt-44' : 'pt-20'} text-center `}>
 
         <div className="flex flex-col items-center justify-center mt-20 max-w-[1200px] m-auto">
 
-          <div className="bg-white rounded-full px-4 py-2 flex gap-2">
+          <div className="bg-white rounded-full px-4 py-2 flex gap-2 items-center text-xs md:text-base">
             <span className="text-[#07090D] font-semibold">Controle sua Revenda com o melhor sistema do Brasil</span>
             <div className="h-5 w-5 rounded-full bg-[#07090D]" />
           </div>
