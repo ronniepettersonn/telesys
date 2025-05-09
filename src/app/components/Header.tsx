@@ -15,14 +15,14 @@ export default function Header({ showPromotion, setShowPromotion }: { showPromot
             <nav className="bg-[#07090DCC] backdrop-blur-md fixed w-full z-[999999]">
                 {
                     showPromotion &&
-                    <div className='flex justify-center items-center h-13 bg-gradient-to-r to-[#07090DCC] via-sky-900 w-full relative'>
-                        <div className='mr-12 py-1 px-8 bg-sky-950 border border-sky-400 rounded-full'>
+                    <div className='flex flex-col md:flex-row md:h-13 py-2 justify-center items-center bg-gradient-to-r to-[#07090DCC] via-sky-900 w-full relative'>
+                        <div className='md:mr-12 mb-2 md:mb-0 py-1 px-8 bg-sky-950 border border-sky-400 rounded-full'>
                             <p className='font-semibold '>50% OFF</p>
                         </div>
 
                         <p className=''>Emissão de <strong>NFCE</strong> e <strong>NFE</strong>  com 50% de desconto</p>
 
-                        <div className='ml-12'>
+                        <div className='md:ml-12 '>
                             <Link href={'https://api.whatsapp.com/send?phone=5531984372245&text=📌%20Olá%2C%20eu%20ví%20no%20seu%20site%20o%20desconto%20de%2050%25%20para%20contratação%20de%20NFE%20e%20NFCE.%0AGostaria%20de%20mais%20informação.'} target='_blank'>
                                 <button className='border-b flex items-center  hover:cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out gap-2 py-1 border-white/50 font-semibold'>Contratar Agora <PiArrowRightBold /></button>
                             </Link>

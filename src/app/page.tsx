@@ -32,7 +32,7 @@ export default function Home() {
     <div className=" ">
       <Header showPromotion={showPromotion} setShowPromotion={setShowPromotion} />
 
-      <main className={` m-auto ${showPromotion ? 'pt-40' : 'pt-20'}  `}>
+      <main className={` m-auto ${showPromotion ? 'pt-40' : 'pt-20'} text-center `}>
 
         <div className="flex flex-col items-center justify-center mt-20 max-w-[1200px] m-auto">
 
@@ -43,15 +43,18 @@ export default function Home() {
 
           <h2 className="bg-gradient-to-r text-transparent bg-clip-text from-cyan-300 to-blue-600 text-6xl font-extrabold mt-10">Sua Revenda ao seu Controle</h2>
 
-          <p className="text-xl mt-10">Praticidade e Segurança são caracteristicas marcantes do Sistema Telesys</p>
-          <p className="text-xl">Fácil e intuitivo, será um prazer controlar sua empresa.</p>
+          <p className="text-xl mt-10 max-w-[630px] px-4">
+            Praticidade e Segurança são caracteristicas marcantes do Sistema Telesys
+            Fácil e intuitivo, será um prazer controlar sua empresa.
+          </p>
+          <p className="text-xl"></p>
 
           <div className="mt-10 flex gap-4">
             <Button title="Assinar agora" />
             <Button title="Saiba mais" variant="OUTLINE" />
           </div>
 
-          <div className="mt-16 max-h-[480px]">
+          <div className="mt-16 max-h-[480px] mx-4">
             <Image src={HeroImg} alt="banner" className="max-h-[480px] w-auto rounded-3xl" />
           </div>
 
@@ -99,8 +102,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="h-[420px] w-[650px] ">
-              <div className="w-full h-full bg-gradient-to-tl to-sky-300 via-emerald-400 from-blue-700 rounded-2xl ">
+            <div className="md:h-[400px] md:w-[630px] md:ml-4">
+              <div className="w-full h-full bg-gradient-to-tl to-sky-300 via-emerald-400 from-blue-700 rounded-2xl p-5">
                 {
                   tabs.map((tab, i) => {
                     return (

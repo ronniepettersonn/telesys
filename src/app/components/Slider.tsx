@@ -87,7 +87,7 @@ export function Slider() {
                                 </div>
                             </div>
 
-                            <div className='w-full border-l border-white/10 p-10 overflow-hidden'>
+                            <div className='w-full border-l border-white/10 p-10 overflow-scroll'>
                                 <div>
                                     <h4 className='font-semibold'>Jefferson Cardoso</h4>
                                     <p className='text-white/50'>Proprietário</p>
@@ -109,17 +109,17 @@ export function Slider() {
                 </div>
             </SwiperSlide>
 
-            <SwiperSlide className='w-full ' style={{ minWidth: '800px', display: 'flex', justifyContent: 'center' }}>
-                <div className={`h-[400px] w-[800px]  ${isCurrent === 1 ? 'opacity-100' : 'opacity-10'} transition-all  duration-300 ease-in-out`}>
-                    <div className='w-[800px] h-[400px] '>
-                        <div className=' flex justify-between w-[800px] h-[400px] border border-white/10 rounded-2xl'>
+            <SwiperSlide className='w-full ' style={{ display: 'flex', justifyContent: 'center' }}>
+                <div className={`h-[400px] lg:w-[800px] px-4 ${isCurrent === 1 ? 'opacity-100' : 'opacity-10'} transition-all  duration-300 ease-in-out`}>
+                    <div className='lg:w-[800px] h-[400px] '>
+                        <div className=' flex justify-between lg:w-[800px] h-[400px] border border-white/10 rounded-2xl'>
                             <div>
-                                <div className='flex-col w-[280px] h-full flex justify-between items-center bg-radial-[100%_60%_at_0%_0%] from-emerald-500/70 from-0%  to-100% to-[#07090D] rounded-tl-2xl rounded-bl-2xl pb-10'>
-                                    <Image src={Test1} alt='' className='w-[110px] h-auto pt-16' />
+                                <div className='flex-col w-[200px] md:w-[280px] h-full flex justify-between items-center bg-radial-[100%_60%_at_0%_0%] from-emerald-500/70 from-0%  to-100% to-[#07090D] rounded-tl-2xl rounded-bl-2xl pb-10'>
+                                    <Image src={Test1} alt='' className='w-[64px] md:w-[110px] h-auto pt-16' />
 
                                     <div className=''>
                                         <div className='flex flex-col justify-center items-center gap-4 mb-16'>
-                                            <span className='font-medium text-white/50'>REDES SOCIAIS</span>
+                                            <span className='font-medium text-white/50 text-xs md:text-base'>REDES SOCIAIS</span>
 
                                             <div className='flex gap-2'>
 
@@ -147,7 +147,7 @@ export function Slider() {
                                             </div>
                                         </div>
 
-                                        <button className='bg-white flex items-center gap-2 text-[#07090D] px-6 py-2 rounded-full font-semibold'>Case de Sucesso
+                                        <button className='bg-white hidden md:flex items-center gap-2 text-[#07090D] px-6 py-2 rounded-full font-semibold'>Case de Sucesso
                                             <Image src={Arrow} alt='' />
                                         </button>
                                     </div>
@@ -155,13 +155,13 @@ export function Slider() {
                                 </div>
                             </div>
 
-                            <div className='w-full border-l border-white/10 p-10'>
+                            <div className='w-full border-l border-white/10 p-10 overflow-scroll'>
                                 <div>
                                     <h4 className='font-semibold'>Jefferson Cardoso</h4>
                                     <p className='text-white/50'>Proprietário</p>
                                 </div>
 
-                                <p className='mt-6'>
+                                <p className='mt-6 text-ellipsis overflow-hidden'>
                                     {'"'}O Telesys foi uma verdadeira revolução na minha empresa,
                                     hoje tenho controle de tudo, sem falar da economia que o
                                     produto nos traz. Tenho uma revenda à qual não tenho atendentes,
@@ -177,17 +177,17 @@ export function Slider() {
                 </div>
             </SwiperSlide>
 
-            <SwiperSlide className='w-full' style={{ minWidth: '800px', display: 'flex', justifyContent: 'center' }}>
-                <div className={`w-[800px] h-[400px] ${isCurrent === 2 ? 'opacity-100' : 'opacity-10'} transition-all  duration-300 ease-in-out`}>
-                    <div className='w-[800px] h-[400px] '>
-                        <div className=' flex justify-between w-[800px] h-[400px] border border-white/10 rounded-2xl'>
+            <SwiperSlide className='w-full' style={{ display: 'flex', justifyContent: 'center' }}>
+                <div className={`md:w-[800px] h-[400px] px-4 ${isCurrent === 2 ? 'opacity-100' : 'opacity-10'} transition-all  duration-300 ease-in-out`}>
+                    <div className='md:w-[800px] h-[400px] '>
+                        <div className=' flex justify-between md:w-[800px] h-[400px] border border-white/10 rounded-2xl'>
                             <div>
-                                <div className='flex-col w-[280px] h-full flex justify-between items-center bg-radial-[100%_60%_at_0%_0%] from-sky-500/70 from-0%  to-100% to-[#07090D] rounded-tl-2xl rounded-bl-2xl pb-10'>
-                                    <Image src={Test1} alt='' className='w-[110px] h-auto pt-16' />
+                                <div className='flex-col w-[200px] md:w-[280px] h-full flex justify-between items-center bg-radial-[100%_60%_at_0%_0%] from-sky-500/70 from-0%  to-100% to-[#07090D] rounded-tl-2xl rounded-bl-2xl pb-10'>
+                                    <Image src={Test1} alt='' className='w-[64px] md:w-[110px] h-auto pt-16' />
 
                                     <div className=''>
                                         <div className='flex flex-col justify-center items-center gap-4 mb-16'>
-                                            <span className='font-medium text-white/50'>REDES SOCIAIS</span>
+                                            <span className='font-medium text-white/50 text-xs md:text-base'>REDES SOCIAIS</span>
 
                                             <div className='flex gap-2'>
 
@@ -215,7 +215,7 @@ export function Slider() {
                                             </div>
                                         </div>
 
-                                        <button className='bg-white flex items-center gap-2 text-[#07090D] px-6 py-2 rounded-full font-semibold'>Case de Sucesso
+                                        <button className='bg-white hidden md:flex items-center gap-2 text-[#07090D] px-6 py-2 rounded-full font-semibold'>Case de Sucesso
                                             <Image src={Arrow} alt='' />
                                         </button>
                                     </div>
@@ -223,13 +223,13 @@ export function Slider() {
                                 </div>
                             </div>
 
-                            <div className='w-full border-l border-white/10 p-10'>
+                            <div className='w-full border-l border-white/10 p-10 overflow-scroll '>
                                 <div>
                                     <h4 className='font-semibold'>Jefferson Cardoso</h4>
                                     <p className='text-white/50'>Proprietário</p>
                                 </div>
 
-                                <p className='mt-6'>
+                                <p className='mt-6 '>
                                     {'"'}O Telesys foi uma verdadeira revolução na minha empresa,
                                     hoje tenho controle de tudo, sem falar da economia que o
                                     produto nos traz. Tenho uma revenda à qual não tenho atendentes,
