@@ -81,7 +81,7 @@ export default function Home() {
             title="Precisa de ajuda?"
             description="Nossa equipe de suporte é treinada e está disponível para lhe ajudar no que for necessário"
             titleButtonSolid="Chamar Suporte"
-            titleButtonOutline="Ver trinemento"
+            titleButtonOutline="Ver treinamento"
             buttons
           />
 
