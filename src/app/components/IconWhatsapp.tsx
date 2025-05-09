@@ -25,7 +25,7 @@ export function IconWhatsapp() {
     }, [])
 
     return (
-        <div className="relative">
+        <div className="relative z-50">
             {
                 !openedChat &&
                 <div className="fixed bottom-[112px] right-10 flex w-[338px] gap-2 rounded-l-[20px] rounded-tr-[20px] border border-[#152323] bg-[#060d0d] px-4 py-3 shadow-emerald-300/10 shadow-[0px_4px_32px_0px] sm:right-10 sm:w-[330px]">
@@ -38,8 +38,8 @@ export function IconWhatsapp() {
                 </div>
             }
 
-            <Link href={'https://wa.me/5531984372245'} target="_blank" onClick={handleClickWhatsapp}>
-                <div className="fixed bottom-10 right-10 p-3 bg-emerald-400 rounded-full">
+            <Link href={'https://api.whatsapp.com/send?phone=5531984372245&text=Olá%2C%20você%20pode%20me%20ajudar%3F'} target="_blank" onClick={handleClickWhatsapp}>
+                <div className="fixed bottom-10 right-10 p-3 bg-emerald-400 rounded-2xl">
                     <FaWhatsapp size={32} />
                 </div>
             </Link>

@@ -15,6 +15,7 @@ import { useState } from "react";
 //import { Testimonial } from "./components/Testimonial";
 import { Slider } from "./components/Slider";
 import { IconWhatsapp } from "./components/IconWhatsapp";
+import { Banner } from "./components/Banner";
 
 
 const tabs = [
@@ -25,12 +26,13 @@ const tabs = [
 
 export default function Home() {
   const [index, setIndex] = useState(0)
+  const [showPromotion, setShowPromotion] = useState(true)
 
   return (
     <div className=" ">
-      <Header />
+      <Header showPromotion={showPromotion} setShowPromotion={setShowPromotion} />
 
-      <main className=" m-auto pt-20 ">
+      <main className={` m-auto ${showPromotion ? 'pt-40' : 'pt-20'}  `}>
 
         <div className="flex flex-col items-center justify-center mt-20 max-w-[1200px] m-auto">
 
@@ -130,6 +132,8 @@ export default function Home() {
       <Footer />
 
       <IconWhatsapp />
+
+      <Banner />
     </div>
   );
 }
