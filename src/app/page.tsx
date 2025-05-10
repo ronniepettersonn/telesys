@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import Image from "next/image";
 
 import HeroImg from '../../public/hero1.png'
+import ImgVideo1 from '../../public/imgVideo1.png'
+import ImgVideo2 from '../../public/imgVideo2.png'
 import HeroImgMobile from '../../public/hero1-mobile.png'
 import Banner1 from '../../public/banner1.png'
 import Banner2 from '../../public/banner2.png'
@@ -19,6 +21,7 @@ import { IconWhatsapp } from "./components/IconWhatsapp";
 import { Banner } from "./components/Banner";
 import Link from "next/link";
 import { Features } from "./components/Features";
+import { PiArrowRightBold, PiClockFill, PiNoteFill, PiWhatsappLogoFill } from "react-icons/pi";
 
 
 const tabs = [
@@ -142,26 +145,134 @@ export default function Home() {
           <Slider />
         </section>
 
-        <section className="pt-30 pb-20 max-w-[1200px] m-auto">
+        <section className="pt-30 pb-20 max-w-[1200px] m-auto px-4">
           <TitleSection
             title="Veja um pouco do Telesys"
             description="Veja alguns vídeos do Sistema Telesys em funcionamento e como você pode ser eficiente no controle da sua revenda"
 
           />
 
-          <div className="mt-20 flex justify-center">
-            <div className="border border-[#4C5155] max-w-[600px] w-full p-10 rounded-3xl">
-              <h3 className="text-3xl font-semibold">Conheça o Telesys</h3>
+          <div className="mt-20 flex flex-col min-[1250px]:flex-row items-center justify-center  gap-8">
 
-              <p className="text-white/80 ">Assite esse video de apresentação do Telesys e tenha uma boa noção de
-                como o sistema funciona e como ele pode lhe ajudar</p>
+            <div className="border border-[#4C5155] lg:max-w-[600px] w-full rounded-3xl">
+              <div className=" p-10">
+                <h3 className="text-3xl font-semibold">Conheça o Telesys</h3>
 
-              <div className="flex justify-center">
-                <iframe width={540} height={380} className="rounded-xl" src="https://www.youtube.com/embed/yZ9blrqi9cw?si=ZUS9OstXnvowgsy-" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <p className="text-white/80 text-xl mt-4 mb-10">Assita esse video de apresentação do Telesys e tenha uma boa noção de
+                  como o sistema funciona e como ele pode lhe ajudar</p>
+
+                <div className="flex justify-center">
+                  <button className="py-2 bg-white w-fit rounded-full flex items-center gap-2 px-4 text-[16px] text-[#07090D]">
+                    <p className="font-semibold">
+                      Assistir Apresentação do Telesys
+                    </p>
+
+                    <div className="h-5 w-5 rounded-full bg-[#07090D] text-white flex items-center justify-center">
+                      <PiArrowRightBold size={12} />
+                    </div>
+                  </button>
+                </div>
+
+              </div>
+
+              <div className="w-full overflow-hidden rounded-3xl">
+                <Image src={ImgVideo1} alt="" className="w-full" />
+              </div>
+            </div>
+
+
+            <div className="border border-[#4C5155] lg:max-w-[600px] w-full rounded-3xl">
+              <div className=" p-10">
+                <h3 className="text-3xl font-semibold">Rastreio GPS</h3>
+
+                <p className="text-white/80 text-xl mt-4 mb-10">Assita esse video de apresentação do módulo de Rastrio GPS
+                  que permite acompanhar as entregas em tempo real no Telesys</p>
+
+                <div className="flex justify-center">
+                  <button className="py-2 bg-white w-fit rounded-full flex items-center gap-2 px-4 text-[16px] text-[#07090D]">
+                    <p className="font-semibold">
+                      Assistir Módulo Rastreio GPS
+                    </p>
+
+                    <div className="h-5 w-5 rounded-full bg-[#07090D] text-white flex items-center justify-center">
+                      <PiArrowRightBold size={12} />
+                    </div>
+                  </button>
+                </div>
+
+              </div>
+
+              <div className="w-full overflow-hidden rounded-3xl">
+                <Image src={ImgVideo2} alt="" className="w-full " />
               </div>
             </div>
           </div>
 
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 justify-center mt-20">
+            <div className="max-w-[400px] md:max-w-[313px] text-left">
+              <h5 className="flex items-center gap-2 font-semibold mb-2">
+                <div className="text-sky-400">
+                  <PiWhatsappLogoFill />
+                </div>
+                Módulo de Whatsapp
+              </h5>
+              <p className="text-white/80">
+                Com este módulo você permitirá
+                que seu cliente faça pedidos
+                diretamente do Whatsapp sem
+                interação humana e também fazer
+                envio de mensagens em massa.
+              </p>
+            </div>
+
+            <div className="max-w-[400px] md:max-w-[313px] text-left">
+              <h5 className="flex items-center gap-2 font-semibold mb-2">
+                <div className="text-sky-400">
+                  <PiClockFill />
+                </div>
+                Módulo Leitura de Gás
+              </h5>
+              <p className="text-white/80">
+                Com o módulo de Leitura de Gás você poderá
+                fazer venda e controle de gás à granel. Facilite as
+                leituras de consumo através do Sistema Telesys ou no Aplicativo
+                de Leitura de Gás.</p>
+            </div>
+
+            <div className="max-w-[400px] md:max-w-[313px] text-left">
+              <h5 className="flex items-center gap-2 font-semibold mb-2">
+                <div className="text-sky-400">
+                  <PiNoteFill />
+                </div>
+                Módulo Fiscal
+              </h5>
+              <p className="text-white/80">
+                Com o Módulo Fiscal do Telesys você conseguirá
+                fazer emissão de NFE e NFCE de forma simples e
+                descomplicada. Conte também com geração dos Livros Fiscais
+                de Sintegra e SPED.</p>
+            </div>
+
+
+
+
+          </div>
+
+        </section>
+
+        <section className="pt-30 pb-20 max-w-[1200px] m-auto px-4">
+          <TitleSection
+            title="Planos do Telesys"
+            description="Conheça nossos planos e módulos e veja o que mais se adapta com a 
+            sua Revenda de Gás"
+            titleButtonSolid="Contratar  Plano"
+            titleButtonOutline="Saber mais"
+            buttons
+          />
+
+          <div>
+
+          </div>
         </section>
 
       </main>
