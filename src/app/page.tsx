@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import Image from "next/image";
 
 import HeroImg from '../../public/hero1.png'
+import Pro from '../../public/pro.svg'
+import Premium from '../../public/premium.svg'
 import ImgVideo1 from '../../public/imgVideo1.png'
 import ImgVideo2 from '../../public/imgVideo2.png'
 import HeroImgMobile from '../../public/hero1-mobile.png'
@@ -21,13 +23,29 @@ import { IconWhatsapp } from "./components/IconWhatsapp";
 import { Banner } from "./components/Banner";
 import Link from "next/link";
 import { Features } from "./components/Features";
-import { PiArrowRightBold, PiClockFill, PiNoteFill, PiWhatsappLogoFill } from "react-icons/pi";
+import { PiArrowRightBold, PiCheckCircle, PiClockFill, PiNoteFill, PiWhatsappLogoFill } from "react-icons/pi";
 
 
 const tabs = [
   { img: Banner1 },
   { img: Banner2 },
   { img: Banner3 },
+]
+
+const pro = [
+  { id: 1, title: 'Gerenciamento de Cliente' },
+  { id: 2, title: 'Mais de 50 Relatórios' },
+  { id: 3, title: 'Controle Financeiro' },
+  { id: 4, title: 'Gestão de Estoque' },
+  { id: 5, title: 'Uso de Bina' },
+]
+
+const premium = [
+  { id: 6, title: 'Tudo do Plano Pro' },
+  { id: 7, title: 'Integração com Telefonia' },
+  { id: 8, title: 'Hospedagem na Núvem' },
+  { id: 9, title: 'Backups Automáticos' },
+  { id: 10, title: 'Rastreio GPS' },
 ]
 
 export default function Home() {
@@ -265,13 +283,144 @@ export default function Home() {
             title="Planos do Telesys"
             description="Conheça nossos planos e módulos e veja o que mais se adapta com a 
             sua Revenda de Gás"
-            titleButtonSolid="Contratar  Plano"
-            titleButtonOutline="Saber mais"
-            buttons
           />
 
-          <div>
+          <div className="flex mt-20 justify-center gap-6 overflow-scroll pt-6">
 
+            <div>
+              <div className="relative w-[304px] h-[534px] overflow-hidden rounded-2xl border border-[#1e252b]">
+                <div className="absolute w-[304px] h-[534px] bg-gradient-to-bl blur-2xl opacity-40">
+                </div>
+
+                <div className="relative z-[1] flex flex-col items-start py-10 px-6">
+                  <div className="border w-fit border-[#6b7277] rounded-full p-1 pr-3 flex items-center gap-2 bg-gradient-to-r from-blue-700/50 to-75% ">
+                    <Image src={Premium} alt="" />
+                    <h5 className="font-semibold">PREMIUM</h5>
+                  </div>
+
+                  <h3 className="mt-5 text-4xl text-white">Consulte</h3>
+
+                  <p className="text-left mt-2 text-white/50 max-w-3/4">
+                    Se você quer ter acesso a todos os módulo essa é a melhor opção.
+                  </p>
+
+                  <button className="bg-white/10 text-white w-full py-2 rounded-full mt-6 hover:cursor-pointer hover:scale-105 transition-all ease-in-out">
+                    Assinar
+                  </button>
+
+                  <div className="flex flex-col mt-7 gap-4">
+                    {
+                      premium.map(item => {
+                        return (
+
+                          <div key={item.id} className={`flex items-center gap-4 text-[#1e252b] ${item.id === 6 && 'text-sky-500/30'}`}>
+                            <PiCheckCircle size={24} />
+
+                            <p className={` ${item.id === 6 ? 'font-bold text-sky-500' : 'text-white'}`}>{item.title}</p>
+                          </div>
+                        )
+                      })
+                    }
+
+                  </div>
+
+
+                </div>
+
+              </div>
+            </div>
+
+            <div>
+              <div className="relative w-[304px] flex justify-center">
+                <div className="absolute z-10 px-4 -top-[20px] w-fit py-2 rounded-full shadow-lg/30 shadow-[#07090D] bg-gradient-to-bl from-cyan-600 to-blue-900">
+                  <h5>MAIS POPULAR</h5>
+                </div>
+              </div>
+
+              <div className="relative w-[304px] h-[534px] overflow-hidden rounded-2xl border border-[#1e252b]">
+                <div className="absolute w-[304px] h-[534px] bg-gradient-to-bl blur-2xl from-cyan-600 to-blue-900 opacity-40">
+                </div>
+
+                <div className="relative z-[1] flex flex-col items-start py-10 px-6">
+                  <div className="border w-fit border-[#6b7277] rounded-full p-1 pr-3 flex items-center gap-2 bg-white/20 ">
+                    <Image src={Pro} alt="" />
+                    <h5 className="font-semibold">PRO</h5>
+                  </div>
+
+                  <h3 className="mt-5 text-4xl text-white">Consulte</h3>
+
+                  <p className="text-left mt-2 text-white/50 max-w-3/4">
+                    Perfeito para quem quer ter controle e praticidade com emissão fiscal.
+                  </p>
+
+                  <button className="bg-white text-[#07090D] w-full py-2 rounded-full mt-6 hover:cursor-pointer hover:scale-105 transition-all ease-in-out">
+                    Assinar
+                  </button>
+
+                  <div className="flex flex-col mt-7 gap-4">
+                    {
+                      pro.map(item => {
+                        return (
+
+                          <div key={item.id} className="flex items-center gap-4 text-[#43628a]">
+                            <PiCheckCircle size={24} />
+
+                            <p className="text-white">{item.title}</p>
+                          </div>
+                        )
+                      })
+                    }
+
+                  </div>
+
+
+                </div>
+
+              </div>
+            </div>
+
+            <div>
+              <div className="relative w-[304px] h-[534px] overflow-hidden rounded-2xl border border-[#1e252b]">
+                <div className="absolute w-[304px] h-[534px] bg-gradient-to-bl blur-2xl opacity-40">
+                </div>
+
+                <div className="relative z-[1] flex flex-col items-start py-10 px-6">
+                  <div className="border w-fit border-[#6b7277] rounded-full p-1 pr-3 flex items-center gap-2 bg-gradient-to-r from-blue-700/50 to-75% ">
+                    <Image src={Premium} alt="" />
+                    <h5 className="font-semibold">PREMIUM</h5>
+                  </div>
+
+                  <h3 className="mt-5 text-4xl text-white">Consulte</h3>
+
+                  <p className="text-left mt-2 text-white/50 max-w-3/4">
+                    Se você quer ter acesso a todos os módulo essa é a melhor opção.
+                  </p>
+
+                  <button className="bg-white/10 text-white w-full py-2 rounded-full mt-6 hover:cursor-pointer hover:scale-105 transition-all ease-in-out">
+                    Assinar
+                  </button>
+
+                  <div className="flex flex-col mt-7 gap-4">
+                    {
+                      premium.map(item => {
+                        return (
+
+                          <div key={item.id} className={`flex items-center gap-4 text-[#1e252b] ${item.id === 6 && 'text-sky-500/30'}`}>
+                            <PiCheckCircle size={24} />
+
+                            <p className={` ${item.id === 6 ? 'font-bold text-sky-500' : 'text-white'}`}>{item.title}</p>
+                          </div>
+                        )
+                      })
+                    }
+
+                  </div>
+
+
+                </div>
+
+              </div>
+            </div>
           </div>
         </section>
 
