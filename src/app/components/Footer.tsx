@@ -22,7 +22,7 @@ export default function Footer() {
                                 className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                                 href="#"
                             >
-                                About
+                                Sobre nós
                             </a>
                         </li>
 
@@ -31,7 +31,7 @@ export default function Footer() {
                                 className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                                 href="#"
                             >
-                                Careers
+                                Netxpert
                             </a>
                         </li>
 
@@ -40,7 +40,7 @@ export default function Footer() {
                                 className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                                 href="#"
                             >
-                                History
+                                Anydesk
                             </a>
                         </li>
 
@@ -75,7 +75,7 @@ export default function Footer() {
                     <ul className="mt-12 flex justify-center gap-6 md:gap-8">
                         <li>
                             <a
-                                href="#"
+                                href="https://www.facebook.com/sistematelesys"
                                 rel="noreferrer"
                                 target="_blank"
                                 className="text-gray-700 transition hover:text-gray-700/75 dark:text-white/50 dark:hover:text-white/75"
@@ -93,7 +93,7 @@ export default function Footer() {
 
                         <li>
                             <a
-                                href="#"
+                                href="https://www.instagram.com/sistematelesys"
                                 rel="noreferrer"
                                 target="_blank"
                                 className="text-gray-700 transition hover:text-gray-700/75 dark:text-white/50 dark:hover:text-white/75"
@@ -111,7 +111,7 @@ export default function Footer() {
 
                         <li>
                             <a
-                                href="#"
+                                href="https://youtube.com/netxpertbr"
                                 rel="noreferrer"
                                 target="_blank"
                                 className="text-gray-700 transition hover:text-gray-700/75 dark:text-white/50 dark:hover:text-white/75"
@@ -130,14 +130,14 @@ export default function Footer() {
 
                     </ul>
                 </div>
-                {/* <div className="flex w-full m-auto max-w-[1200px] border-t border-[#4C5155]">
+                <div className="flex w-full m-auto max-w-[1200px] border-t border-[#4C5155]">
                     <div className="flex justify-center w-full pt-4  pb-8">
                         <div className="flex items-center">
                             <p className="text-white/50">Copyright © 2025 Netxpert · All rights reserved.</p>
                         </div>
                     </div>
 
-                </div> */}
+                </div>
             </footer>
             {/* <div className="flex w-full m-auto max-w-[1200px] border-t border-[#4C5155] mt-8">
                 <div className="py-16 flex justify-between w-full">

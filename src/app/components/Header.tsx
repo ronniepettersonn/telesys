@@ -42,11 +42,12 @@ export default function Header({ showPromotion, setShowPromotion }: { showPromot
                 }
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-                        <Image src={Logo} className='h-9 w-auto' alt="Flowbite Logo" />
-
+                        <Image src={Logo} className='h-9 w-auto' alt="Logo Telesys" />
                     </a>
                     <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                        <button type="button" className="text-white  hover:cursor-pointer focus:ring-4 focus:outline-none  hidden md:flex items-center gap-2 font-medium rounded-lg text-sm px-4 py-2  text-center bg-sky-600 hover:bg-sky-700 focus:ring-sky-800"><FaWhatsapp /> Contratar</button>
+                        <Link href={'https://wa.me/5531984372245'} target='_blank'>
+                            <button type="button" className="text-white  hover:cursor-pointer focus:ring-4 focus:outline-none  hidden md:flex items-center gap-2 font-medium rounded-lg text-sm px-4 py-2  text-center bg-sky-600 hover:bg-sky-700 focus:ring-sky-800"><FaWhatsapp /> Contratar</button>
+                        </Link>
                         <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm  rounded-lg md:hidden  focus:outline-none focus:ring-2  text-gray-400 hover:bg-gray-700 focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
                             <span className="sr-only">Open main menu</span>
                             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
