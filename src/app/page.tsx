@@ -7,6 +7,7 @@ import Image from "next/image";
 import HeroImg from '../../public/hero1.png'
 import Pro from '../../public/pro.svg'
 import Premium from '../../public/premium.svg'
+import Basic from '../../public/basic.svg'
 import ImgVideo1 from '../../public/imgVideo1.png'
 import ImgVideo2 from '../../public/imgVideo2.png'
 import HeroImgMobile from '../../public/hero1-mobile.png'
@@ -33,12 +34,20 @@ const tabs = [
   { img: Banner3 },
 ]
 
+const basic = [
+  { id: 11, title: 'Gerenciamento de Cliente' },
+  { id: 12, title: 'Suporte Técnico' },
+  { id: 13, title: 'Uso de Bina' },
+
+
+]
+
 const pro = [
-  { id: 1, title: 'Gerenciamento de Cliente' },
+  { id: 1, title: 'Tudo do Plano Basic' },
   { id: 2, title: 'Mais de 50 Relatórios' },
   { id: 3, title: 'Controle Financeiro' },
   { id: 4, title: 'Gestão de Estoque' },
-  { id: 5, title: 'Uso de Bina' },
+  { id: 5, title: 'Gestão de Usuário' },
 ]
 
 const premium = [
@@ -275,9 +284,6 @@ export default function Home() {
                 de Sintegra e SPED.</p>
             </div>
 
-
-
-
           </div>
 
         </section>
@@ -297,15 +303,15 @@ export default function Home() {
                 </div>
 
                 <div className="relative z-[1] flex flex-col items-start py-10 px-6">
-                  <div className="border w-fit border-[#6b7277] rounded-full p-1 pr-3 flex items-center gap-2 bg-gradient-to-r from-blue-700/50 to-75% ">
-                    <Image src={Premium} alt="" />
-                    <h5 className="font-semibold">PREMIUM</h5>
+                  <div className="border w-fit border-[#6b7277] rounded-full p-1 pr-3 flex items-center gap-2 bg-gradient-to-r from-emerald-500/50 to-75% ">
+                    <Image src={Basic} alt="" />
+                    <h5 className="font-semibold">BASIC</h5>
                   </div>
 
                   <h3 className="mt-5 text-4xl text-white">Consulte</h3>
 
                   <p className="text-left mt-2 text-white/50 max-w-3/4">
-                    Se você quer ter acesso a todos os módulo essa é a melhor opção.
+                    Se você quer apenas lançar as suas vendas no sistema e usar a bina.
                   </p>
 
                   <button className="bg-white/10 text-white w-full py-2 rounded-full mt-6 hover:cursor-pointer hover:scale-105 transition-all ease-in-out">
@@ -314,13 +320,13 @@ export default function Home() {
 
                   <div className="flex flex-col mt-7 gap-4">
                     {
-                      premium.map(item => {
+                      basic.map(item => {
                         return (
 
-                          <div key={item.id} className={`flex items-center gap-4 text-[#1e252b] ${item.id === 6 && 'text-sky-500/30'}`}>
+                          <div key={item.id} className={`flex items-center gap-4 text-[#1e252b] `}>
                             <PiCheckCircle size={24} />
 
-                            <p className={` ${item.id === 6 ? 'font-bold text-sky-500' : 'text-white'}`}>{item.title}</p>
+                            <p className={` ${'text-white'}`}>{item.title}</p>
                           </div>
                         )
                       })
@@ -366,10 +372,10 @@ export default function Home() {
                       pro.map(item => {
                         return (
 
-                          <div key={item.id} className="flex items-center gap-4 text-[#43628a]">
+                          <div key={item.id} className={`flex items-center gap-4 ${item.id === 1 ? 'text-sky-400/30' : 'text-[#43628a]'} `}>
                             <PiCheckCircle size={24} />
 
-                            <p className="text-white">{item.title}</p>
+                            <p className={`${item.id === 1 ? 'font-bold text-sky-400' : 'text-white'}`}>{item.title}</p>
                           </div>
                         )
                       })
@@ -426,6 +432,25 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+
+        <section className={`${showPromotion ? 'pt-40' : 'pt-30'} relative pb-20 max-w-[1200px] m-auto px-4 mb-[400px]`} id="testar">
+          <TitleSection
+            title="Quero Testar o Sistema"
+            description="Comece hoje e simplifique a gestão da sua Revenda. Sem compromisso e com suporte humanizado."
+            titleButtonSolid="Testar o Sistema Agora"
+            buttons
+          />
+
+          <div className="flex justify-center mt-10">
+            <Button title="Testar o sistema agora por 7 dias" />
+          </div>
+
+
+          <div className="absolute top-[350px] left-0 right-0 -z-10 h-[400px] bg-[url(../../public/bgFinal.png)] mx-4 min-[1200px]:mx-0 rounded-4xl">
+
+          </div>
+
         </section>
 
       </main>

@@ -4,8 +4,26 @@ import Link from "next/link";
 import { Button } from "./Button";
 import { ReactNode } from "react";
 
-export function TitleSection({ title, description, buttons = true, titleButtonSolid, titleButtonOutline, icon }: { title: string, description: string, buttons?: boolean, titleButtonSolid?: string, titleButtonOutline?: string, icon?: ReactNode }) {
-    //const router = useRouter()
+type TitleSectionProps = {
+    title: string
+    description?: string
+    buttons?: boolean
+    titleButtonSolid?: string
+    titleButtonOutline?: string
+    icon?: ReactNode
+    onClickButtonSolid?: () => void
+    onClickButtonOutline?: () => void
+}
+
+export function TitleSection({
+    title,
+    description,
+    buttons,
+    titleButtonSolid,
+    titleButtonOutline,
+    icon
+}: TitleSectionProps) {
+
 
     return (
         <div className="flex flex-col items-center">

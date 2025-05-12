@@ -66,7 +66,7 @@ export default function Header({ showPromotion, setShowPromotion }: { showPromot
                                 <LinkScroll to='modulos' href="#modulos" spy smooth duration={800} onSetActive={() => setIsActive('modulos')} className={`${isActive === 'modulos' ? 'text-sky-500 font-bold' : 'text-white'} block py-2 px-3 md:p-0  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-sky-500  hover:text-white  border-gray-700`}>Módulos</LinkScroll>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-sky-500  hover:text-white  border-gray-700">Contato</a>
+                                <LinkScroll to='testar' href="#testar" spy smooth duration={800} onSetActive={() => setIsActive('testar')} className={`${isActive === 'testar' ? 'text-sky-500 font-bold' : 'text-white'} block py-2 px-3 md:p-0  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-sky-500  hover:text-white  border-gray-700`}>Testar</LinkScroll>
                             </li>
                         </ul>
                     </div>
