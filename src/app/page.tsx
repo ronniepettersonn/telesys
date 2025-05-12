@@ -171,7 +171,7 @@ export default function Home() {
         </Element>
 
 
-        <section className="pt-56 overflow-x-scroll w-full relative z-0">
+        <section className="pt-56 w-full relative z-0">
           {/* <Testimonial /> */}
           <Slider />
         </section>
@@ -189,7 +189,7 @@ export default function Home() {
               <div className=" p-10">
                 <h3 className="text-3xl font-semibold">Conheça o Telesys</h3>
 
-                <p className="text-white/80 text-xl mt-4 mb-10">Assita esse video de apresentação do Telesys e tenha uma boa noção de
+                <p className="text-white/80 text-xl mt-4 mb-10">Assista esse video de apresentação do Telesys e tenha uma boa noção de
                   como o sistema funciona e como ele pode lhe ajudar</p>
 
                 <div className="flex justify-center">
@@ -216,7 +216,7 @@ export default function Home() {
               <div className=" p-10">
                 <h3 className="text-3xl font-semibold">Rastreio GPS</h3>
 
-                <p className="text-white/80 text-xl mt-4 mb-10">Assita esse video de apresentação do módulo de Rastrio GPS
+                <p className="text-white/80 text-xl mt-4 mb-10">Assista esse video de apresentação do módulo de Rastrio GPS
                   que permite acompanhar as entregas em tempo real no Telesys</p>
 
                 <div className="flex justify-center">
@@ -434,7 +434,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${showPromotion ? 'pt-40' : 'pt-30'} relative pb-20 max-w-[1200px] m-auto px-4 mb-[400px]`} id="testar">
+        <section className={`${showPromotion ? 'pt-40' : 'pt-30'} relative pb-20 max-w-[1200px] m-auto px-4 mb-10`} id="testar">
           <TitleSection
             title="Quero Testar o Sistema"
             description="Comece hoje e simplifique a gestão da sua Revenda. Sem compromisso e com suporte humanizado."
@@ -447,7 +447,62 @@ export default function Home() {
           </div>
 
 
-          <div className="absolute top-[350px] left-0 right-0 -z-10 h-[400px] bg-[url(../../public/bgFinal.png)] mx-4 min-[1200px]:mx-0 rounded-4xl">
+          <div className="absolute top-[350px] left-0 right-0 -z-10 h-[590px] bg-[url(../../public/bgFinal.png)] bg-cover bg-center bg-no-repeat mx-4 min-[1200px]:mx-0 rounded-br-4xl rounded-bl-4xl">
+          </div>
+
+          <div className="mt-[140px] flex justify-center gap-4 mx-4">
+
+            <div className="min-[1200px]:flex justify-center hidden">
+              <div className=" px-8 py-6 bg-white/20 w-fit rounded-2xl">
+
+                <div className="w-[200px] text-left">
+                  <h1 className="font-bold text-xl">Pocket</h1>
+                </div>
+
+                <div className="w-[300px] text-left mt-4 mb-10">
+                  <p>{'"'}The automation from design to code
+                    with Specify is incredibly powerful. The
+                    ability to reference the same tokens and
+                    assets in Figma — and in our codebase —
+                    saves us an incredible amount of time,
+                    while reducing manual, error-prone work.{'"'}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="min-[800px]:flex justify-center hidden">
+              <div className="  px-8 py-6 bg-white/20 w-fit rounded-2xl">
+                <div className="w-[200px] text-left">
+                  <h1 className="font-bold text-xl">Pocket</h1>
+                </div>
+
+                <div className="w-[300px] text-left mt-4 mb-10">
+                  <p>{'"'}The automation from design to code
+                    with Specify is incredibly powerful. The
+                    ability to reference the same tokens and
+                    assets in Figma — and in our codebase —
+                    saves us an incredible amount of time,
+                    while reducing manual, error-prone work.{'"'}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <div className="  px-8 py-6 bg-white/20 w-fit rounded-2xl">
+                <div className="w-[200px] text-left">
+                  <h1 className="font-bold text-xl">Pocket</h1>
+                </div>
+
+                <div className="w-[300px] text-left mt-4 mb-10">
+                  <p>{'"'}The automation from design to code
+                    with Specify is incredibly powerful. The
+                    ability to reference the same tokens and
+                    assets in Figma — and in our codebase —
+                    saves us an incredible amount of time,
+                    while reducing manual, error-prone work.{'"'}</p>
+                </div>
+              </div>
+            </div>
 
           </div>
 

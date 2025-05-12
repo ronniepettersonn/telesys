@@ -19,7 +19,7 @@ export function Slider() {
             //slidesPerView={3}
             onSlideChange={(e) => { setIsCurrent(e.realIndex) }}
             onSwiper={(swiper) => console.log(swiper)}
-            className='z-[10] overflow-hidden w-full'
+            className='z-[10] w-full'
             modules={[/* Navigation, */ Pagination, Autoplay/* Scrollbar, A11y, */]}
             pagination={{
                 clickable: true, renderBullet: function (index, className) {
@@ -88,7 +88,7 @@ export function Slider() {
                                 </div>
                             </div>
 
-                            <div className='w-full border-l border-white/10 px-8 pb-8 md:p-10 overflow-scroll'>
+                            <div className='w-full border-l border-white/10 px-8 pb-8 md:p-10 '>
                                 <div>
                                     <h4 className='font-semibold'>Jefferson Cardoso</h4>
                                     <p className='text-white/50'>Proprietário</p>
@@ -156,7 +156,7 @@ export function Slider() {
                                 </div>
                             </div>
 
-                            <div className='w-full border-l border-white/10 px-8 pb-8 md:p-10 overflow-scroll'>
+                            <div className='w-full border-l border-white/10 px-8 pb-8 md:p-10 '>
                                 <div>
                                     <h4 className='font-semibold'>Jefferson Cardoso</h4>
                                     <p className='text-white/50'>Proprietário</p>
@@ -224,7 +224,7 @@ export function Slider() {
                                 </div>
                             </div>
 
-                            <div className='w-full border-l border-white/10 px-8 pb-8 md:p-10 overflow-scroll'>
+                            <div className='w-full border-l border-white/10 px-8 pb-8 md:p-10 '>
                                 <div>
                                     <h4 className='font-semibold'>Jefferson Cardoso</h4>
                                     <p className='text-white/50'>Proprietário</p>
