@@ -117,6 +117,8 @@ export default function Home() {
               icon={<FaWhatsapp size={24} />}
               titleButtonOutline="Ver treinamento"
               buttons
+              hRefButtonSolid="https://wa.me/5531984372245"
+              hRefButtonOutline="https://youtube.com/netxpertbr"
             />
 
             <div className="mt-20 flex flex-col gap-8 lg:gap-0 lg:flex-row justify-between items-center">
@@ -295,7 +297,7 @@ export default function Home() {
             sua Revenda de Gás"
           />
 
-          <div className="flex mt-20 justify-center gap-6 overflow-scroll pt-6">
+          <div className="flex mt-20 justify-start lg:justify-center gap-6 overflow-x-scroll md:overflow-auto pt-6">
 
             <div>
               <div className="relative w-[304px] h-[534px] overflow-hidden rounded-2xl border border-[#1e252b]">
@@ -314,9 +316,11 @@ export default function Home() {
                     Se você quer apenas lançar as suas vendas no sistema e usar a bina.
                   </p>
 
-                  <button className="bg-white/10 text-white w-full py-2 rounded-full mt-6 hover:cursor-pointer hover:scale-105 transition-all ease-in-out">
-                    Assinar
-                  </button>
+                  <Link className='w-full' href={'https://wa.me/553184372245'} target="_blank">
+                    <button className="bg-white/10 text-white w-full py-2 rounded-full mt-6 hover:cursor-pointer hover:scale-105 transition-all ease-in-out">
+                      Assinar
+                    </button>
+                  </Link>
 
                   <div className="flex flex-col mt-7 gap-4">
                     {
@@ -363,9 +367,11 @@ export default function Home() {
                     Perfeito para quem quer ter controle e praticidade com emissão fiscal.
                   </p>
 
-                  <button className="bg-white text-[#07090D] w-full py-2 rounded-full mt-6 hover:cursor-pointer hover:scale-105 transition-all ease-in-out">
-                    Assinar
-                  </button>
+                  <Link className='w-full' href={'https://wa.me/553184372245'} target="_blank">
+                    <button className="bg-white text-[#07090D] w-full py-2 rounded-full mt-6 hover:cursor-pointer hover:scale-105 transition-all ease-in-out">
+                      Assinar
+                    </button>
+                  </Link>
 
                   <div className="flex flex-col mt-7 gap-4">
                     {
@@ -405,10 +411,11 @@ export default function Home() {
                   <p className="text-left mt-2 text-white/50 max-w-3/4">
                     Se você quer ter acesso a todos os módulo essa é a melhor opção.
                   </p>
-
-                  <button className="bg-white/10 text-white w-full py-2 rounded-full mt-6 hover:cursor-pointer hover:scale-105 transition-all ease-in-out">
-                    Assinar
-                  </button>
+                  <Link className='w-full' href={'https://wa.me/553184372245'} target="_blank">
+                    <button className="bg-white/10 text-white w-full py-2 rounded-full mt-6 hover:cursor-pointer hover:scale-105 transition-all ease-in-out">
+                      Assinar
+                    </button>
+                  </Link>
 
                   <div className="flex flex-col mt-7 gap-4">
                     {
@@ -443,7 +450,9 @@ export default function Home() {
           />
 
           <div className="flex justify-center mt-10">
-            <Button title="Testar o sistema agora por 7 dias" />
+            <Link href={'https://wa.me/553184372245'} target="_blank">
+              <Button title="Testar o sistema agora por 7 dias" />
+            </Link>
           </div>
 
 

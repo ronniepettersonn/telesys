@@ -29,7 +29,8 @@ export default function Footer() {
                         <li>
                             <a
                                 className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-                                href="#"
+                                href="http://netxpert.com.br"
+                                target="_blank"
                             >
                                 Netxpert
                             </a>
@@ -38,7 +39,8 @@ export default function Footer() {
                         <li>
                             <a
                                 className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-                                href="#"
+                                href="https://anydesk.com"
+                                target="_blank"
                             >
                                 Anydesk
                             </a>
@@ -47,9 +49,10 @@ export default function Footer() {
                         <li>
                             <a
                                 className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-                                href="#"
+                                href="https://wa.me/554884022662"
+                                target="_blank"
                             >
-                                Services
+                                TopTron
                             </a>
                         </li>
 
@@ -57,6 +60,7 @@ export default function Footer() {
                             <a
                                 className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                                 href="#"
+                                target="_blank"
                             >
                                 Projects
                             </a>
@@ -66,6 +70,7 @@ export default function Footer() {
                             <a
                                 className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                                 href="#"
+                                target="_blank"
                             >
                                 Blog
                             </a>

@@ -11,6 +11,8 @@ type TitleSectionProps = {
     titleButtonSolid?: string
     titleButtonOutline?: string
     icon?: ReactNode
+    hRefButtonSolid?: string
+    hRefButtonOutline?: string
     onClickButtonSolid?: () => void
     onClickButtonOutline?: () => void
 }
@@ -21,7 +23,9 @@ export function TitleSection({
     buttons,
     titleButtonSolid,
     titleButtonOutline,
-    icon
+    icon,
+    hRefButtonSolid = '#',
+    hRefButtonOutline = '#'
 }: TitleSectionProps) {
 
 
@@ -34,10 +38,12 @@ export function TitleSection({
             {
                 buttons && titleButtonSolid && titleButtonOutline &&
                 <div className="flex gap-4 mt-10">
-                    <Link href={'https://wa.me/553184372245'} target="_blank">
+                    <Link href={hRefButtonSolid} target="_blank">
                         <Button title={titleButtonSolid} icon={icon} />
                     </Link>
-                    <Button title={titleButtonOutline} variant="OUTLINE" />
+                    <Link href={hRefButtonOutline} target="_blank">
+                        <Button title={titleButtonOutline} variant="OUTLINE" />
+                    </Link>
                 </div>
             }
         </div>
