@@ -4,8 +4,12 @@ import Image from 'next/image'
 import Logo from '../../../public/logo.png'
 import { PiArrowRightBold, PiXBold } from 'react-icons/pi'
 import Link from 'next/link'
+import { Link as LinkScroll } from 'react-scroll/modules'
+import { useState } from 'react'
 
 export default function Header({ showPromotion, setShowPromotion }: { showPromotion: boolean, setShowPromotion: (state: boolean) => void }) {
+    const [isActive, setIsActive] = useState('home')
+
     function handleClosePromotion() {
         setShowPromotion(false)
     }
@@ -52,16 +56,16 @@ export default function Header({ showPromotion, setShowPromotion }: { showPromot
                     <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
                         <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:border-gray-700">
                             <li>
-                                <a href="#" className="block py-2 px-3 md:p-0 text-white bg-sky-700 rounded-sm md:bg-transparent md:text-sky-500" aria-current="page">Home</a>
+                                <LinkScroll to='home' href='#home' spy smooth duration={800} onSetActive={() => setIsActive('home')} className={`${isActive === 'home' ? 'text-sky-500 font-bold' : 'text-white'} block py-2 px-3 md:p-0  rounded-sm md:bg-transparent md:hover:text-sky-500`} aria-current="page">Home</LinkScroll>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-sky-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">Suporte</a>
+                                <LinkScroll to='suporte' href='#suporte' spy smooth duration={800} onSetActive={() => setIsActive('suporte')} className={`${isActive === 'suporte' ? 'text-sky-500 font-bold' : 'text-white'} block py-2 px-3 md:p-0  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-sky-500   border-gray-700`}>Suporte</LinkScroll>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-sky-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">Módulos</a>
+                                <LinkScroll to='modulos' href="#modulos" spy smooth duration={800} onSetActive={() => setIsActive('modulos')} className={`${isActive === 'modulos' ? 'text-sky-500 font-bold' : 'text-white'} block py-2 px-3 md:p-0  rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-sky-500  hover:text-white  border-gray-700`}>Módulos</LinkScroll>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-sky-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">Contato</a>
+                                <a href="#" className="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-sky-500  hover:text-white  border-gray-700">Contato</a>
                             </li>
                         </ul>
                     </div>

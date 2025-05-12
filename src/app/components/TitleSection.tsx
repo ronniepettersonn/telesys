@@ -2,8 +2,9 @@
 //import { useRouter } from "next/router";
 import Link from "next/link";
 import { Button } from "./Button";
+import { ReactNode } from "react";
 
-export function TitleSection({ title, description, buttons = true, titleButtonSolid, titleButtonOutline }: { title: string, description: string, buttons?: boolean, titleButtonSolid?: string, titleButtonOutline?: string }) {
+export function TitleSection({ title, description, buttons = true, titleButtonSolid, titleButtonOutline, icon }: { title: string, description: string, buttons?: boolean, titleButtonSolid?: string, titleButtonOutline?: string, icon?: ReactNode }) {
     //const router = useRouter()
 
     return (
@@ -16,7 +17,7 @@ export function TitleSection({ title, description, buttons = true, titleButtonSo
                 buttons && titleButtonSolid && titleButtonOutline &&
                 <div className="flex gap-4 mt-10">
                     <Link href={'https://wa.me/553184372245'} target="_blank">
-                        <Button title={titleButtonSolid} />
+                        <Button title={titleButtonSolid} icon={icon} />
                     </Link>
                     <Button title={titleButtonOutline} variant="OUTLINE" />
                 </div>
