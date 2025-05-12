@@ -24,7 +24,3 @@ body {
   color: var(--foreground);
   font-family: Inter, sans-serif;
 }
-
-.active {
-  color: red !important
-}

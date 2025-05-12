@@ -6,6 +6,7 @@ import { PiArrowRightBold, PiXBold } from 'react-icons/pi'
 import Link from 'next/link'
 import { Link as LinkScroll } from 'react-scroll/modules'
 import { useState } from 'react'
+import { FaWhatsapp } from 'react-icons/fa'
 
 export default function Header({ showPromotion, setShowPromotion }: { showPromotion: boolean, setShowPromotion: (state: boolean) => void }) {
     const [isActive, setIsActive] = useState('home')
@@ -45,7 +46,7 @@ export default function Header({ showPromotion, setShowPromotion }: { showPromot
 
                     </a>
                     <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                        <button type="button" className="text-white  hover:cursor-pointer focus:ring-4 focus:outline-none  hidden md:block font-medium rounded-lg text-sm px-4 py-2 text-center bg-sky-600 hover:bg-sky-700 focus:ring-sky-800">Saiba mais</button>
+                        <button type="button" className="text-white  hover:cursor-pointer focus:ring-4 focus:outline-none  hidden md:flex items-center gap-2 font-medium rounded-lg text-sm px-4 py-2  text-center bg-sky-600 hover:bg-sky-700 focus:ring-sky-800"><FaWhatsapp /> Contratar</button>
                         <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm  rounded-lg md:hidden  focus:outline-none focus:ring-2  text-gray-400 hover:bg-gray-700 focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
                             <span className="sr-only">Open main menu</span>
                             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
