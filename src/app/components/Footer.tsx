@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Logo from '../../../public/logo.png'
+import Link from "next/link";
 //import { Badget } from "./Badget";
 
 export default function Footer() {
@@ -137,8 +138,9 @@ export default function Footer() {
                 </div>
                 <div className="flex w-full m-auto max-w-[1200px] border-t border-[#4C5155]">
                     <div className="flex justify-center w-full pt-4  pb-8">
-                        <div className="flex items-center">
-                            <p className="text-white/50">Copyright © 2025 Netxpert · All rights reserved.</p>
+                        <div className="flex flex-col gap-2 items-center">
+                            <p className="text-white/50">Copyright © 2025 Netxpert · All rights reserved. </p>
+                            <p className="text-white/50">Produced by <Link href={'http://ronniepettersonn.com.br'} className="underline text-white/60" target="_blank">Ronnie Pettersonn</Link></p>
                         </div>
                     </div>
 
