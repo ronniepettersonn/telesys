@@ -110,7 +110,7 @@ export function Slider() {
                 </div>
             </SwiperSlide>
 
-            <SwiperSlide className='w-full ' style={{ display: 'flex', justifyContent: 'center' }}>
+            {/* <SwiperSlide className='w-full ' style={{ display: 'flex', justifyContent: 'center' }}>
                 <div className={`lg:h-[400px] lg:w-[800px] px-4 ${isCurrent === 1 ? 'opacity-100' : 'opacity-10'} transition-all  duration-300 ease-in-out`}>
                     <div className='lg:w-[800px] lg:h-[400px] '>
                         <div className=' flex flex-col md:flex-row justify-between lg:w-[800px] md:h-[400px] border border-white/10 rounded-2xl'>
@@ -244,7 +244,7 @@ export function Slider() {
                         </div>
                     </div>
                 </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
 
 
 
