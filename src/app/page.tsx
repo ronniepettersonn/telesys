@@ -412,7 +412,7 @@ export default function Home() {
           <div className="absolute top-[350px] left-0 right-0 -z-10 h-[590px] bg-[url(../../public/bgFinal.png)] bg-cover bg-center bg-no-repeat mx-4 min-[1200px]:mx-0 rounded-br-4xl rounded-bl-4xl">
           </div>
 
-          <div className="mt-[80px] md:mt-[140px] flex justify-center gap-4 mx-4 mask-alpha mask-l-from-black mask-l-from-90% mask-r-from-black mask-r-from-90%">
+          {/* <div className="mt-[80px] md:mt-[140px] flex justify-center gap-4 mx-4 mask-alpha mask-l-from-black mask-l-from-90% mask-r-from-black mask-r-from-90%">
 
             <div className="min-[1200px]:flex justify-center hidden">
               <div className=" px-8 py-6 bg-white/20 w-fit rounded-2xl">
@@ -466,7 +466,9 @@ export default function Home() {
               </div>
             </div>
 
-          </div>
+          </div> */}
+
+          <div className="mt-[400px]"></div>
 
         </section>
 
