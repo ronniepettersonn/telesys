@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 const PRIMARY_DOMAIN = "https://www.telesys.com.br";
-const SECONDARY_DOMAIN = "https://www.telesys.com.br";
+const SECONDARY_DOMAIN = "https://www.sistematelesys.com.br";
 
 export const metadata: Metadata = {
   title: "Telesys - Sistema para Revenda de Gás",
