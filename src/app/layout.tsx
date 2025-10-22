@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 const PRIMARY_DOMAIN = "https://www.telesys.com.br";
+const SECONDARY_DOMAIN = "https://www.telesys.com.br";
 
 export const metadata: Metadata = {
   title: "Telesys - Sistema para Revenda de Gás",
@@ -23,9 +24,12 @@ export const metadata: Metadata = {
     icon: [
       // Favicon clássico (ICO) — URL ABSOLUTA e VERSIONADA
       { url: `${PRIMARY_DOMAIN}/favicon.ico`, type: "image/x-icon", rel: "icon" },
-      // PNGs opcionais (alguns navegadores preferem)
       { url: `${PRIMARY_DOMAIN}/icon-32-20251022.png`, sizes: "32x32", type: "image/png" },
       { url: `${PRIMARY_DOMAIN}/icon-16-20251022.png`, sizes: "16x16", type: "image/png" },
+
+      { url: `${SECONDARY_DOMAIN}/favicon.ico`, type: "image/x-icon", rel: "icon" },
+      { url: `${SECONDARY_DOMAIN}/icon-32-20251022.png`, sizes: "32x32", type: "image/png" },
+      { url: `${SECONDARY_DOMAIN}/icon-16-20251022.png`, sizes: "16x16", type: "image/png" },
     ],
     // iOS / iPadOS (ícone para tela inicial)
     apple: [
