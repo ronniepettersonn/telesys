@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   description:
     "Simplifique a Gestão da Sua Revenda de Gás - Controle pedidos, entregas, estoque e pagamentos em um só lugar de forma simples e rápida.",
   // Use o campo `icons` para padronizar entre domínios e forçar download do asset versionado
+  metadataBase: new URL(SITE.url),
   alternates: { canonical: SITE.url },
   openGraph: {
     url: SITE.url,
