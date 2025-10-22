@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SITE } from "@/lib/site";
+import Script from "next/script";
+import { orgJsonLd, websiteJsonLd } from "@/lib/jsonld";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,6 +23,16 @@ export const metadata: Metadata = {
   description:
     "Simplifique a Gestão da Sua Revenda de Gás - Controle pedidos, entregas, estoque e pagamentos em um só lugar de forma simples e rápida.",
   // Use o campo `icons` para padronizar entre domínios e forçar download do asset versionado
+  alternates: { canonical: SITE.url },
+  openGraph: {
+    url: SITE.url,
+    siteName: "Telesys",
+    title: "Telesys — Sistema para Revenda de Gás",
+    description: "ERP especializado para revendas de gás no Brasil desde 2002.",
+    images: [`${SITE.url}/og-image1.jpg`], // coloque um OG real em /public
+    locale: "pt_BR",
+    type: "website",
+  },
   icons: {
     icon: [
       // Favicon clássico (ICO) — URL ABSOLUTA e VERSIONADA
@@ -57,6 +70,24 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* JSON-LD globais */}
+        <Script
+          id="jsonld-organization"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd()) }}
+        />
+        <Script
+          id="jsonld-website"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd()) }}
+        />
+        {/* SoftwareApplication pode ficar na home também (ver Passo 4).
+            Se quiser já global, descomente: */}
+        {/* <Script
+          id="jsonld-software"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd()) }}
+        /> */}
         {children}
       </body>
     </html>
