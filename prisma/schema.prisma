@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  //output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL") // opcional mas ajuda em migrações no Supabase
+}
+
+model ContractTemplate {
+  id        String   @id @default(uuid())
+  name      String // Ex: "Contrato Netxpert - IAttend"
+  slug      String   @unique // Ex: "netxpert-iattend"
+  version   String // Ex: "1.0.0"
+  content   String // Texto do contrato (markdown ou HTML com {{placeholders}})
+  createdAt DateTime @default(now())
+
+  instances ContractInstance[]
+}
+
+model ContractInstance {
+  id         String           @id @default(uuid())
+  templateId String
+  template   ContractTemplate @relation(fields: [templateId], references: [id])
+
+  clientName     String // Nome da empresa ou responsável
+  clientEmail    String
+  clientDocument String // CPF/CNPJ
+  systemName     String // "IAttend", "Lightra", etc.
+  planName       String // "Plano Pro", etc.
+  startDate      DateTime
+
+  status ContractStatus @default(PENDING) // PENDING | SIGNED | EXPIRED | CANCELED
+
+  token     String   @unique // token único para o link de assinatura
+  createdAt DateTime @default(now())
+
+  // Dados da assinatura
+  signedAt        DateTime?
+  signerIp        String?
+  signerUserAgent String?
+  signatureUrl    String? // URL da imagem de assinatura (quando formos implementar)
+  pdfUrl          String? // URL do PDF final (quando formos implementar)
+  dataHash        String? // hash do conteúdo + dados daquele contrato
+}
+
+enum ContractStatus {
+  PENDING
+  SIGNED
+  EXPIRED
+  CANCELED
+}
