@@ -13,11 +13,8 @@ function renderTemplate(content: string, vars: Record<string, string>) {
     return result
 }
 
-export default async function SignContractPage({
-    params,
-}: {
-    params: { token: string }
-}) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function SignContractPage({ params }: any) {
     const { token } = await params
 
     const instance = await prisma.contractInstance.findUnique({
