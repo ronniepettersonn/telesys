@@ -7,7 +7,8 @@ export default async function NovoContratoPage() {
     })
 
     // mapeia só o que o front precisa
-    const templateOptions = templates.map((t) => ({
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const templateOptions = templates.map((t: any) => ({
         slug: t.slug,
         name: t.name,
         version: t.version,
