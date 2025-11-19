@@ -13,8 +13,11 @@ type FormState = {
     clientName: string
     clientEmail: string
     clientDocument: string
+    clientAddress: string
+    clientPhone: string
     systemName: string
     planName: string
+    planValue: string
     startDate: string
 }
 
@@ -160,6 +163,32 @@ export default function NovoContratoForm({ templates }: Props) {
                                     />
                                 </div>
 
+                                {/* Endereço */}
+                                <div className="sm:col-span-2">
+                                    <label className="block text-sm font-medium text-zinc-200">
+                                        Endereço completo
+                                    </label>
+                                    <input
+                                        name="clientAddress"
+                                        required
+                                        placeholder="Rua, número, bairro, cidade/UF, CEP"
+                                        className="mt-1 block w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 shadow-sm outline-none transition focus:border-amber-400 focus:ring-1 focus:ring-amber-400"
+                                    />
+                                </div>
+
+                                {/* Telefone */}
+                                <div>
+                                    <label className="block text-sm font-medium text-zinc-200">
+                                        Telefone / WhatsApp
+                                    </label>
+                                    <input
+                                        name="clientPhone"
+                                        required
+                                        placeholder="(31) 99999-9999"
+                                        className="mt-1 block w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 shadow-sm outline-none transition focus:border-amber-400 focus:ring-1 focus:ring-amber-400"
+                                    />
+                                </div>
+
                                 {/* E-mail */}
                                 <div>
                                     <label className="block text-sm font-medium text-zinc-200">
@@ -182,7 +211,7 @@ export default function NovoContratoForm({ templates }: Props) {
                                     <input
                                         name="systemName"
                                         required
-                                        placeholder="Telesys / IAttend / Lightra..."
+                                        placeholder="Telesys / IAttend / Netfiscal..."
                                         className="mt-1 block w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 shadow-sm outline-none transition focus:border-amber-400 focus:ring-1 focus:ring-amber-400"
                                     />
                                 </div>
@@ -195,7 +224,23 @@ export default function NovoContratoForm({ templates }: Props) {
                                     <input
                                         name="planName"
                                         required
-                                        placeholder="Ex.: Plano Pro, Plano Premium..."
+                                        placeholder="Ex.: Plano Mensal, Plano Pro..."
+                                        className="mt-1 block w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 shadow-sm outline-none transition focus:border-amber-400 focus:ring-1 focus:ring-amber-400"
+                                    />
+                                </div>
+
+                                {/* Valor mensal */}
+                                <div>
+                                    <label className="block text-sm font-medium text-zinc-200">
+                                        Valor mensal (R$)
+                                    </label>
+                                    <input
+                                        name="planValue"
+                                        type="number"
+                                        step="0.01"
+                                        min="0"
+                                        required
+                                        placeholder="Ex.: 199.90"
                                         className="mt-1 block w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 shadow-sm outline-none transition focus:border-amber-400 focus:ring-1 focus:ring-amber-400"
                                     />
                                 </div>
@@ -226,7 +271,8 @@ export default function NovoContratoForm({ templates }: Props) {
                                 <div className="rounded-lg border border-emerald-700 bg-emerald-950/60 px-3 py-3 text-sm text-emerald-100">
                                     <p className="font-medium">Contrato gerado com sucesso!</p>
                                     <p className="mt-1">
-                                        Envie este link para o cliente assinar:
+                                        O link para assinatura do contrato foi enviado por e-mail para o cliente, se precisar
+                                        do link ele está logo abaixo:
                                     </p>
                                     <a
                                         href={result}
@@ -282,7 +328,7 @@ export default function NovoContratoForm({ templates }: Props) {
                             </p>
                             <ul className="mt-2 list-disc pl-4 text-xs text-zinc-400">
                                 <li><span className="font-mono">netxpert-iattend</span></li>
-                                <li><span className="font-mono">netxpert-lightra</span></li>
+                                <li><span className="font-mono">netxpert-netfiscal</span></li>
                                 <li><span className="font-mono">netxpert-telesys</span></li>
                             </ul>
                             <p className="mt-2 text-xs text-zinc-500">

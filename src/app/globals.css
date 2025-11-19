@@ -46,3 +46,12 @@ body {
   color: var(--foreground);
   font-family: Inter, sans-serif;
 }
+
+.prose {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.prose p {
+  margin-bottom: 0.9rem;
+}

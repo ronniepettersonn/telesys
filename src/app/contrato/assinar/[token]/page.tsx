@@ -2,16 +2,11 @@ import { prisma } from '@/lib/prisma'
 import { notFound } from 'next/navigation'
 import SignContractForm from './SignContractForm'
 
-function renderTemplate(content: string, vars: Record<string, string>) {
-    let result = content
-
-    Object.entries(vars).forEach(([key, value]) => {
-        const regex = new RegExp(`{{${key}}}`, 'g')
-        result = result.replace(regex, value)
-    })
-
-    return result
-}
+/* type SignContractPageProps = {
+    params: {
+        token: string
+    }
+} */
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function SignContractPage({ params }: any) {
@@ -19,7 +14,6 @@ export default async function SignContractPage({ params }: any) {
 
     const instance = await prisma.contractInstance.findUnique({
         where: { token },
-        include: { template: true },
     })
 
     if (!instance) {
@@ -32,13 +26,14 @@ export default async function SignContractPage({ params }: any) {
         timeZone: 'America/Sao_Paulo',
     })
 
-    const renderedContent = renderTemplate(instance.template.content, {
-        clientName: instance.clientName,
-        clientDocument: instance.clientDocument,
-        systemName: instance.systemName,
-        planName: instance.planName,
-        startDate: formattedDate,
-    })
+    const formattedPlanValue =
+        instance.planValue &&
+        instance.planValue
+            .toNumber()
+            .toLocaleString('pt-BR', { minimumFractionDigits: 2 })
+
+    // Agora usamos o snapshot salvo na instância
+    const renderedContent = instance.content
 
     return (
         <div className="min-h-screen bg-zinc-950 text-zinc-100">
@@ -89,9 +84,14 @@ export default async function SignContractPage({ params }: any) {
 
                         {/* Texto do contrato */}
                         <div className="mt-4 max-h-[60vh] space-y-4 overflow-y-auto rounded-xl border border-zinc-800 bg-zinc-950/40 px-4 py-4 text-sm leading-relaxed text-zinc-200">
-                            <pre className="whitespace-pre-wrap text-sm text-zinc-200">
+                            {/* <pre className="whitespace-pre-wrap text-sm text-zinc-200">
                                 {renderedContent}
-                            </pre>
+                            </pre> */}
+
+                            <div
+                                className="prose prose-invert max-w-none text-sm"
+                                dangerouslySetInnerHTML={{ __html: renderedContent }}
+                            />
                         </div>
                     </section>
 
@@ -108,24 +108,49 @@ export default async function SignContractPage({ params }: any) {
                                         {instance.clientName}
                                     </dd>
                                 </div>
+
                                 <div>
                                     <dt className="text-zinc-500">CPF / CNPJ</dt>
                                     <dd className="font-mono text-[11px] text-zinc-200">
                                         {instance.clientDocument}
                                     </dd>
                                 </div>
+
                                 <div>
                                     <dt className="text-zinc-500">E-mail</dt>
                                     <dd className="text-zinc-200">
                                         {instance.clientEmail}
                                     </dd>
                                 </div>
+
+                                <div>
+                                    <dt className="text-zinc-500">Endereço</dt>
+                                    <dd className="text-zinc-200">
+                                        {instance.clientAddress}
+                                    </dd>
+                                </div>
+
+                                <div>
+                                    <dt className="text-zinc-500">Telefone</dt>
+                                    <dd className="text-zinc-200">
+                                        {instance.clientPhone}
+                                    </dd>
+                                </div>
+
                                 <div>
                                     <dt className="text-zinc-500">Sistema contratado</dt>
                                     <dd className="text-zinc-200">
                                         {instance.systemName} — {instance.planName}
                                     </dd>
                                 </div>
+
+                                <div>
+                                    <dt className="text-zinc-500">Valor mensal</dt>
+                                    <dd className="text-zinc-200">
+                                        {formattedPlanValue ? `R$ ${formattedPlanValue}` : '—'}
+                                    </dd>
+                                </div>
+
                                 <div>
                                     <dt className="text-zinc-500">Início de vigência</dt>
                                     <dd className="text-zinc-200">

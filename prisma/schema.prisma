@@ -31,25 +31,34 @@ model ContractInstance {
   templateId String
   template   ContractTemplate @relation(fields: [templateId], references: [id])
 
-  clientName     String // Nome da empresa ou responsável
+  clientName     String
   clientEmail    String
-  clientDocument String // CPF/CNPJ
-  systemName     String // "IAttend", "Lightra", etc.
-  planName       String // "Plano Pro", etc.
-  startDate      DateTime
+  clientDocument String
+  clientAddress  String // novo: {{ENDERECO_DO_CLIENTE}}
+  clientPhone    String // novo: {{TELEFONE_DO_CLIENTE}}
 
-  status ContractStatus @default(PENDING) // PENDING | SIGNED | EXPIRED | CANCELED
+  systemName String // "IAttend", "Telesys", etc.
+  planName   String // "Plano Mensal", etc.
+  planValue  Decimal @db.Decimal(10, 2) // novo: {{VALOR_MENSAL}}
 
-  token     String   @unique // token único para o link de assinatura
+  startDate DateTime
+
+  // status
+  status ContractStatus @default(PENDING)
+
+  token     String   @unique
   createdAt DateTime @default(now())
 
   // Dados da assinatura
   signedAt        DateTime?
   signerIp        String?
   signerUserAgent String?
-  signatureUrl    String? // URL da imagem de assinatura (quando formos implementar)
-  pdfUrl          String? // URL do PDF final (quando formos implementar)
-  dataHash        String? // hash do conteúdo + dados daquele contrato
+  signatureUrl    String?
+  pdfUrl          String?
+  dataHash        String?
+
+  // novo: texto final do contrato preenchido
+  content String // snapshot do contrato com todos os placeholders já substituídos
 }
 
 enum ContractStatus {

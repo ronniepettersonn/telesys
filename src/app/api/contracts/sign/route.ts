@@ -6,17 +6,6 @@ import { sendEmail } from "@/lib/mail";
 import { contractSignedTemplate } from "@/lib/email/templates/contractSigned";
 import { internalNotificationTemplate } from "@/lib/email/templates/internalNotification";
 
-function renderTemplate(content: string, vars: Record<string, string>) {
-  let result = content;
-
-  Object.entries(vars).forEach(([key, value]) => {
-    const regex = new RegExp(`{{${key}}}`, "g");
-    result = result.replace(regex, value);
-  });
-
-  return result;
-}
-
 export async function POST(req: NextRequest) {
   try {
     const { token } = await req.json();
@@ -30,7 +19,6 @@ export async function POST(req: NextRequest) {
 
     const instance = await prisma.contractInstance.findUnique({
       where: { token },
-      include: { template: true },
     });
 
     if (!instance) {
@@ -50,39 +38,41 @@ export async function POST(req: NextRequest) {
 
     const userAgent = req.headers.get("user-agent") || "unknown";
 
-    // 1) Renderizar o conteúdo do contrato com variáveis
+    // data de início formatada pt-BR
     const formattedStartDate = instance.startDate.toLocaleDateString("pt-BR", {
       timeZone: "America/Sao_Paulo",
     });
 
-    const renderedContent = renderTemplate(instance.template.content, {
-      clientName: instance.clientName,
-      clientDocument: instance.clientDocument,
-      systemName: instance.systemName,
-      planName: instance.planName,
-      startDate: formattedStartDate,
-    });
+    // valor mensal formatado pt-BR
+    const formattedPlanValue =
+      instance.planValue &&
+      `R$ ${instance.planValue
+        .toNumber()
+        .toLocaleString("pt-BR", { minimumFractionDigits: 2 })}`;
 
     const signedAtDate =
       alreadySigned && instance.signedAt ? instance.signedAt : now;
 
-    // 2) Gerar PDF com layout melhorado
+    // 1) Gerar PDF com o HTML do contrato já preenchido
     const pdfBytes = await createContractPdf({
-      content: renderedContent,
+      content: instance.content, // HTML salvo na instância
       clientName: instance.clientName,
       clientEmail: instance.clientEmail,
       clientDocument: instance.clientDocument,
+      clientAddress: instance.clientAddress,
+      clientPhone: instance.clientPhone,
       systemName: instance.systemName,
       planName: instance.planName,
+      planValue: formattedPlanValue || "—",
       startDate: formattedStartDate,
       signedAt: signedAtDate,
       signerIp: ip,
     });
 
-    // 3) Upload para Supabase
+    // 2) Upload para Supabase
     const pdfUrl = await uploadContractPdf(instance.id, pdfBytes);
 
-    // 4) Atualizar o registro no banco
+    // 3) Atualizar o registro no banco
     const updated = await prisma.contractInstance.update({
       where: { id: instance.id },
       data: {
@@ -97,9 +87,9 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    // 5) E-mails automáticos
+    // 4) E-mails automáticos
 
-    // 5.1 E-mail para o cliente com link do contrato
+    // 4.1 E-mail para o cliente com link do contrato
     await sendEmail({
       to: instance.clientEmail,
       subject: `Contrato assinado - ${instance.systemName}`,
@@ -111,7 +101,7 @@ export async function POST(req: NextRequest) {
       }),
     });
 
-    // 5.2 E-mail interno notificando assinatura
+    // 4.2 E-mail interno notificando assinatura
     const internalEmail = process.env.MAIL_INTERNAL;
     if (internalEmail) {
       await sendEmail({
@@ -130,7 +120,7 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ ok: true, pdfUrl: updated.pdfUrl });
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     console.error("Error signing contract:", err);
     return NextResponse.json(
