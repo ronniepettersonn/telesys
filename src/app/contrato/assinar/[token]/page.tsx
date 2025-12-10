@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import { notFound } from 'next/navigation'
 import SignContractForm from './SignContractForm'
+import { Header } from '@/components/Header'
 
 /* type SignContractPageProps = {
     params: {
@@ -38,7 +39,7 @@ export default async function SignContractPage({ params }: any) {
     return (
         <div className="min-h-screen bg-zinc-950 text-zinc-100">
             {/* Topo */}
-            <header className="border-b border-zinc-800 bg-zinc-950/90 backdrop-blur">
+            {/* <header className="border-b border-zinc-800 bg-zinc-950/90 backdrop-blur">
                 <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
                     <div>
                         <p className="text-xs font-medium uppercase tracking-wide text-zinc-500">
@@ -52,7 +53,13 @@ export default async function SignContractPage({ params }: any) {
                         </p>
                     </div>
                 </div>
-            </header>
+            </header> */}
+
+            <Header
+                tagline='Contrato de prestação de serviços'
+                title={`${instance.systemName} • Netxpert`}
+                description='Revise os termos abaixo e confirme o aceite para ativar o seu contrato.'
+            />
 
             {/* Conteúdo */}
             <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">

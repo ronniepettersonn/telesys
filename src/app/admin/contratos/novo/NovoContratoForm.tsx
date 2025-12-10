@@ -1,5 +1,6 @@
 'use client'
 
+import { Header } from '@/components/Header'
 import { useState } from 'react'
 
 type TemplateOption = {
@@ -69,21 +70,11 @@ export default function NovoContratoForm({ templates }: Props) {
     return (
         <div className="min-h-screen bg-zinc-950 text-zinc-100">
             {/* Topo / header interno */}
-            <div className="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur">
-                <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-                    <div>
-                        <p className="text-xs font-medium uppercase tracking-wide text-zinc-500">
-                            Administração
-                        </p>
-                        <h1 className="text-lg font-semibold text-zinc-50 sm:text-xl">
-                            Novo contrato de prestação de serviço
-                        </h1>
-                        <p className="mt-1 text-sm text-zinc-400">
-                            Gere o link de assinatura do contrato para o cliente de forma rápida e padronizada.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <Header
+                tagline='Administração'
+                title='Novo contrato de prestação de serviço'
+                description='Gere o link de assinatura do contrato para o cliente de forma rápida e padronizada.'
+            />
 
             {/* Conteúdo */}
             <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">

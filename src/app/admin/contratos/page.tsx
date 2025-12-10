@@ -1,6 +1,8 @@
 // src/app/contratos/page.tsx
 'use client'
 
+import { Header } from '@/components/Header'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 type ContractStatus = 'PENDING' | 'SIGNED' | 'EXPIRED' | 'CANCELED'
@@ -130,23 +132,19 @@ export default function ContractsListPage() {
 
     return (
         <div className="min-h-screen bg-zinc-950 text-zinc-100">
+
             {/* Topo */}
-            <header className="border-b border-zinc-800 bg-zinc-950/90 backdrop-blur">
-                <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-                    <div>
-                        <p className="text-xs font-medium uppercase tracking-wide text-zinc-500">
-                            Administração
-                        </p>
-                        <h1 className="text-lg font-semibold text-zinc-50 sm:text-xl">
-                            Contratos gerados
-                        </h1>
-                        <p className="mt-1 text-sm text-zinc-400">
-                            Consulte todos os contratos emitidos, filtre por cliente e acesse
-                            o link de assinatura ou o PDF assinado.
-                        </p>
-                    </div>
-                </div>
-            </header>
+            <Header
+                tagline='Administração'
+                title='Contratos gerados'
+                description='Consulte todos os contratos emitidos, filtre por cliente e acesse
+                        o link de assinatura ou o PDF assinado.'
+                button={
+                    <Link className='inline-flex items-center justify-center rounded-lg bg-amber-500 px-4 py-2 text-xs font-semibold text-zinc-950 shadow-md shadow-amber-500/30 transition hover:bg-amber-400' href={'/admin/contratos/novo'}>Gerar novo contrato</Link>
+                }
+                wide
+            />
+
 
             {/* Conteúdo */}
             <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
