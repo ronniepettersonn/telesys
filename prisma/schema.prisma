@@ -10,9 +10,7 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL") // opcional mas ajuda em migrações no Supabase
+  provider = "postgresql"
 }
 
 model ContractTemplate {
