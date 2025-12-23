@@ -22,8 +22,8 @@ const ITEMS: DownloadItem[] = [
         id: "acesso-remoto",
         title: "Acesso Remoto",
         description: "Arquivo oficial para acesso remoto do suporte.",
-        fileName: "rustdesk-1.4.4-x86_64.exe",
-        href: "https://github.com/rustdesk/rustdesk/releases/download/1.4.4/rustdesk-1.4.4-x86_64.exe",
+        fileName: "rustdesk-1.4.4-x86-sciter.exe",
+        href: "https://github.com/rustdesk/rustdesk/releases/download/1.4.4/rustdesk-1.4.4-x86-sciter.exe",
         version: "v1.4.4",
         updatedAt: "23/12/2025",
         steps: [
