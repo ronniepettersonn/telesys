@@ -91,7 +91,7 @@ const ITEMS: DownloadItem[] = [
 ]
 
 export default function DownloadsClient() {
-    const [selectedId, setSelectedId] = useState<string | null>(null)
+    const [selectedId, setSelectedId] = useState<string | null>('acesso-remoto')
 
     const selected = useMemo(
         () => ITEMS.find((i) => i.id === selectedId) ?? null,
